@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 
 - *(ws)* Login through the desktop client api, the website login is behind a
   bot protection and no longer returns the account page (`csrf_time not found`)
+- *(qbit)* Bump `qbittorrent-api` to 2026.8.0, the pinned 2024.8.65 raised
+  `LoginFailed` against qBittorrent 5.x because it expects an `Ok.` login body
 
 ### 🚀 Features
 
