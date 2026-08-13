@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### 🐛 Bug Fixes
+
+- *(ws)* Login through the desktop client api, the website login is behind a
+  bot protection and no longer returns the account page (`csrf_time not found`)
+
+### 🚀 Features
+
+- *(ws)* Solve the login slider captcha locally, no browser or external service
+- *(ws)* Cache the api session so the login is only repeated when rejected
+- *(env)* `WS_AUTH_HASH` to reuse an existing api session hash
+
+### ⚙️ Miscellaneous Tasks
+
+- *(ws)* Replaced the pickled cookie jar with a json session cache
+
 ## [3.2.0] - 2024-08-26
 
 ### 🚀 Features
