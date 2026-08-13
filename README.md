@@ -20,7 +20,7 @@ Windscribe VPN and need to open the ports.
 ## Docker Setup
 
 > [!important]
-> NOTE: V1 is deprecated and should not be used.
+> DOCKER is not being supported actively in this repo, all the code is from the original repo and should not be expected to work.
 
 ### Registries
 
@@ -81,7 +81,7 @@ docker compose up -d
 | WS_COOKIE_PATH       | Persistent location for the cookie. (v3.x.x only)                                |
 | QBIT_USERNAME        | QBIT username                                                                    |
 | QBIT_PASSWORD        | QBIT password                                                                    |
-| QBIT_HOST            | QBIT web address like, https://qbit.xyz.com or http://192.168.1.10               |
+| QBIT_HOST            | QBIT web address like, <https://qbit.xyz.com> or <http://192.168.1.10>               |
 | QBIT_PORT            | QBIT web port number like, 443 or 8080                                           |
 | QBIT_PRIVATE_TRACKER | get QBIT ready for private tracker by disabling dht, pex and lsd (true or false) |
 | ONESHOT              | Run and setup the code only one time so that job can be schedule externally      |
