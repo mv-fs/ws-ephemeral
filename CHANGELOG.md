@@ -2,24 +2,36 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [4.0.0] - 2026-10-24
 
-### 🐛 Bug Fixes
+### ⚠️ Deprecations
 
-- *(ws)* Login through the desktop client api, the website login is behind a
-  bot protection and no longer returns the account page (`csrf_time not found`)
-- *(qbit)* Bump `qbittorrent-api` to 2026.8.0, the pinned 2024.8.65 raised
-  `LoginFailed` against qBittorrent 5.x because it expects an `Ok.` login body
+- `ONESHOT` is deprecated, use the `ws-ephemeral run` command instead. `ONESHOT=true` still runs once and exits with the default image command (`ws-ephemeral daemon`), but it will be removed in a future release
 
-### 🚀 Features
+### 📚 Documentation
 
-- *(ws)* Solve the login slider captcha locally, no browser or external service
-- *(ws)* Cache the api session so the login is only repeated when rejected
-- *(env)* `WS_AUTH_HASH` to reuse an existing api session hash
+- Improve documentation and docstrings for Windscribe module and related files
+- Warning added
+- Update README with warning and project status note
+- Deprecate ONESHOT in favor of run command
+
+### 🚜 Refactor
+
+- *(ws)* Do not use Union
+- *(typing)* Improve type annotations and code structure
+- *(ws)* Migrate from web scraping to Windscribe API
+- [**breaking**] Restructure into ws_ephemeral package with typer cli
+
+### 🧪 Testing
+
+- Add unit tests for cli, job, scheduler, and windscribe
+- *(cli)* Strip ANSI codes when asserting help output
 
 ### ⚙️ Miscellaneous Tasks
 
-- *(ws)* Replaced the pickled cookie jar with a json session cache
+- Fixing lint error for constant
+- Spell corrections
+- *(env)* Poetry to uv and pre-commit to prek
 
 ## [3.2.0] - 2024-08-26
 
